@@ -15,12 +15,12 @@ const cripto = () => {
 	[...texto].forEach((letra, iletra) => {
 		_replaceVogais.forEach((vogal, iVogal) => {
 			if (letra === vogal) {
-				posDe = iletra; //SE FOR IGUAL SALVA POSICAO E ADICIONA AO TEXTO FINAL
+				posDe = iletra;
 				addToText += _replacePalavras[iVogal];
 			}
 		});
 		if (iletra !== posDe) {
-			addToText += letra; //SE A POSICAO FOR DIFERENTE DA POSICAO QUE ACHOU O VALOR, ESCREVE A LETRA
+			addToText += letra;
 		}
 	});
 
