@@ -18,8 +18,8 @@
 					placeholder="Criptografar texto..."
 				></textarea>
 
-				<button onclick="cripto()">Criptografar</button>
-				<button onclick="decripto()">Descriptografar</button>
+				<input type="button" onclick="cripto()" value="Criptografar" />
+				<input type="button" onclick="decripto()" value="Descriptografar" />
 			</div>
 			<div class="divEncDec">
 				<h2>Resultado</h2>
@@ -28,11 +28,14 @@
 					name="resultadoTextarea"
 					placeholder="Resultado..."
 				></textarea>
-				<button onclick="copyToClip()">Copiar</button>
-				<button onclick="copyToCripDec()">Copiar para Cript/Decript</button>
+				<input type="button" onclick="copyToClip()" value="Copiar" />
+				<input
+					type="button"
+					onclick="copyToCripDec()"
+					value="Copiar para Cript/Decript"
+				/>
 			</div>
 		</div>
 	</body>
-
 	<script src="js/site.js"></script>
 </html>

@@ -7,36 +7,36 @@ let resultado = document.getElementById('resultadoTextarea');
 const cripto = () => {
 	let texto = encriptoTexto.value
 		.normalize('NFD')
-		.replace(/[\u0300-\u036f]/g, '');
+		.replace(/[\u0300-\u036f]/g, '')
+		.toLowerCase();
 	let addToText = '';
 	let posDe;
 
 	[...texto].forEach((letra, iletra) => {
 		_replaceVogais.forEach((vogal, iVogal) => {
 			if (letra === vogal) {
-				posDe = iletra;
+				posDe = iletra; //SE FOR IGUAL SALVA POSICAO E ADICIONA AO TEXTO FINAL
 				addToText += _replacePalavras[iVogal];
 			}
 		});
 		if (iletra !== posDe) {
-			addToText += letra;
+			addToText += letra; //SE A POSICAO FOR DIFERENTE DA POSICAO QUE ACHOU O VALOR, ESCREVE A LETRA
 		}
 	});
 
-	resultado.value = '';
-	resultado.value = addToText;
+	result(resultado, addToText);
 };
 
 const decripto = () => {
 	let texto = encriptoTexto.value
 		.normalize('NFD')
-		.replace(/[\u0300-\u036f]/g, ''); //PREGUIÇA
+		.replace(/[\u0300-\u036f]/g, '')
+		.toLowerCase(); //PREGUIÇA
 	let textoCompleto = '';
 
 	let posDe, posAte;
 
 	[...texto].forEach((letra, iLetra) => {
-		//let posAtual = iLetra;
 		_replacePalavras.forEach((palavra, iPalvra) => {
 			if (palavra === texto.substring(iLetra, palavra.length + iLetra)) {
 				posDe = iLetra;
@@ -51,8 +51,11 @@ const decripto = () => {
 		}
 	});
 
-	resultado.value = '';
-	resultado.value = textoCompleto;
+	result(resultado, textoCompleto);
+};
+
+const result = (elemento, valor = '') => {
+	elemento.value = valor;
 };
 
 const copyToClip = () => {

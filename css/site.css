@@ -1,3 +1,28 @@
+body {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif, Courier, monospace;
+}
+
+input[type="button"] {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px 5px 0 0;
+    font-weight: bold;
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
+    transition: all 500ms ease-in-out 0s;
+}
+
+input[type="button"]:hover,
+input[type="button"]:active {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.3);
+}
+
+textarea {
+    border: 1px solid black;
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
+    resize: none;
+}
+
 .colunasDivEncDec {
     display: flex;
     flex-direction: row;
@@ -22,7 +47,7 @@
         flex-direction: column;
     }
     .divEncDec {
-        width: 95%;
+        width: auto;
         margin: 0 10px;
     }
 }
