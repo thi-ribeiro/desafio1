@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Desafio HTML/JAVASCRIPT - ALURA</title>
+		<link rel="stylesheet" href="css/site.css" />
+	</head>
+
+	<body>
+		<div class="colunasDivEncDec">
+			<div class="divEncDec">
+				<h2>Criptografar / Descriptografar</h2>
+				<textarea
+					id="criptoTextarea"
+					name="criptoTextarea"
+					placeholder="Criptografar texto..."
+				></textarea>
+
+				<button onclick="cripto()">Criptografar</button>
+				<button onclick="decripto()">Descriptografar</button>
+			</div>
+			<div class="divEncDec">
+				<h2>Resultado</h2>
+				<textarea
+					id="resultadoTextarea"
+					name="resultadoTextarea"
+					placeholder="Resultado..."
+				></textarea>
+				<button onclick="copyToClip()">Copiar</button>
+				<button onclick="copyToCripDec()">Copiar para Enc/Dec</button>
+			</div>
+		</div>
+	</body>
+
+	<script src="js/site.js"></script>
+</html>
