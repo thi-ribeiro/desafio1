@@ -56,7 +56,7 @@ const decripto = () => {
 };
 
 const copyToClip = () => {
-	navigator.clipboard.writeText(resultado);
+	navigator.clipboard.writeText(resultado.value);
 };
 
 const copyToCripDec = () => {
