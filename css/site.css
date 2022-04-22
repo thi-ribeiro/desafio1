@@ -4,12 +4,13 @@ body {
 }
 
 input[type="button"] {
-    border: 1px solid black;
+    border: 1px solid #000;
+    background-color: #fff;
     padding: 5px;
     margin: 5px 5px 0 0;
     font-weight: bold;
     box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
-    transition: all 500ms ease-in-out 0s;
+    transition: box-shadow 500ms ease-in-out 0s;
 }
 
 input[type="button"]:hover,
