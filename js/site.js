@@ -36,7 +36,7 @@ const decripto = () => {
 	let posDe, posAte;
 
 	[...texto].forEach((letra, iLetra) => {
-		let posAtual = iLetra;
+		//let posAtual = iLetra;
 		_replacePalavras.forEach((palavra, iPalvra) => {
 			if (palavra === texto.substring(iLetra, palavra.length + iLetra)) {
 				posDe = iLetra;
