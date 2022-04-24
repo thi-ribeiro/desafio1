@@ -9,7 +9,7 @@ input[type="button"] {
     padding: 5px;
     margin: 5px 5px 0 0;
     font-weight: bold;
-    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
     transition: box-shadow 500ms ease-in-out 0s;
 }
 
@@ -20,7 +20,7 @@ input[type="button"]:active {
 
 textarea {
     border: 1px solid black;
-    box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 5px 0px rgba(0, 0, 0, 0.3);
     resize: none;
 }
 
