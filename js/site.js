@@ -9,26 +9,21 @@ const cripto_decripto = (type) => {
 	let txtSaida = '';
 
 	for (let iText = 0; iText < texto.length; iText++) {
-		//POSICAO DA LETRA NO TEXTO
 		for (let iRep = 0; iRep < _replaceVogais.length; iRep++) {
 			let pL = texto[iText];
-			if (type) {
-				let pLRP = _replacePalavras[iRep].charAt(
-					_replacePalavras[iRep].length - 1
-				);
-				let pRF = _replacePalavras[iRep].length - 1;
-				let pLF = texto[iText + pRF];
-				//DECRYPT
-				if (pL === _replaceVogais[iRep] && pLF === pLRP) {
-					iText += _replacePalavras[iRep].length;
-					txtSaida += _replaceVogais[iRep];
-				}
-			} else {
-				//ENCRYPT
-				if (pL === _replaceVogais[iRep]) {
-					iText += _replaceVogais[iRep].length;
-					txtSaida += _replacePalavras[iRep];
-				}
+			let pLRP = _replacePalavras[iRep].charAt(
+				_replacePalavras[iRep].length - 1
+			);
+			let pRF = _replacePalavras[iRep].length - 1;
+			let pLF = texto[iText + pRF];
+
+			if (type && pL === _replaceVogais[iRep] && pLF === pLRP) {
+				iText += _replacePalavras[iRep].length;
+				txtSaida += _replaceVogais[iRep];
+			}
+			if (!type && pL === _replaceVogais[iRep]) {
+				iText += _replaceVogais[iRep].length;
+				txtSaida += _replacePalavras[iRep];
 			}
 		}
 		txtSaida += iText < texto.length ? texto[iText] : '';
@@ -46,6 +41,8 @@ const copyToClip = () => {
 };
 
 const copyToCripDec = () => {
-	encriptoTexto.value = resultado.value;
-	resultado.value = '';
+	if (resultado.value !== '') {
+		encriptoTexto.value = resultado.value;
+		resultado.value = '';
+	}
 };
