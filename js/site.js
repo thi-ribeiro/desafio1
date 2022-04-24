@@ -37,6 +37,7 @@ const cripto_decripto = (type) => {
 };
 
 const result = (elemento, valor = '') => {
+	valor = valor.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 	elemento.value = valor;
 };
 
@@ -82,9 +83,9 @@ const copyToCripDec = () => {
 // //PALAVRAS COM PROBLEMA AO DESENCRIPTAR ... anim|ai|s oct|ober| |enter|obius
 // const decripto = () => {
 // 	let texto = encriptoTexto.value
-// 		.normalize('NFD')
-// 		.replace(/[\u0300-\u036f]/g, '')
-// 		.toLowerCase(); //PREGUIÇA
+// .normalize('NFD')
+// .replace(/[\u0300-\u036f]/g, '')
+// .toLowerCase(); //PREGUIÇA
 // 	let textoCompleto = '';
 // 	let posDe, posAte;
 // 	[...texto].forEach((letra, iLetra) => {
